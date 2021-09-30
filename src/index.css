@@ -1,10 +1,117 @@
 body {
+  text-align: center;
+  line-height: 20px;
+  font-size: large;
+  margin: 2rem;
+  background-color: #f3e9f1;
+}
+
+div {
   display: flex;
+  flex-direction: column;
+  background: #f4ebf2;
+  box-shadow: 5px 5px 15px 5px #000000;
+  border: solid 1px black;
+  border-radius: 30px;
+  margin: 20px;
+}
+
+select {
+  width: 100px;
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+img.logo {
+  width: 15rem;
 }
 
 .cameraPicture {
-  border-radius: 30px;
-  border: solid black 1px;
-  width: 200px;
-  height: 200px;
+  border-radius: 50%;
+  margin: 20px 400px;
+  width: 350px;
+  align-self: center;
+}
+
+.cameraPicture:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  div {
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 400px) {
+  .cameraPicture {
+    width: 180px;
+  }
+}
+
+.media {
+  width: 3rem;
+}
+
+.shopping-cart {
+  width: 4rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cameras-photos {
+  width: 15rem;
+  border-radius: 50%;
+  height: 12rem;
+  transition: all 0.1s ease-in-out;
+  margin: 2rem;
+}
+
+.cameras-photos:hover {
+  transform: scale(1.1);
+}
+
+main {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 8rem 0;
+  flex-wrap: wrap;
+}
+
+form {
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #f4ebf2;
+  text-align: left;
+  width: 30%;
+}
+
+input {
+  width: 100%;
+  margin: 5px 0;
+}
+
+#articles {
+  width: 30px;
+}
+
+.total {
+  margin-top: 2rem;
+}
+
+.confirmation {
+  font-size: x-large;
+  margin: 15rem;
+  line-height: 2rem;
 }

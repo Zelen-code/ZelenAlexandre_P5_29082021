@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orinoco</title>
+    <link rel="stylesheet" href="/src/index.css" />
+    <link rel="icon" href="/JWDP5/images/shopping-cart.svg" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html"
+        ><img class="logo" src="/JWDP5/images/logo-orinoco.png" alt="logo"
+      /></a>
+    </header>
+    <main>
+      <form action="/action_page.php">
+        <label for="articles">Article</label>
+        <input type="text" id="product" name="product" /><br /><br />
+        <label for="price">Prix</label>
+        <input type="text" id="price" name="price" /><br /><br />
+        <label for="articles">Quantité</label>
+        <input type="number" id="articles" name="articles" min="0" max="10" />
+        <br />
+        <section class="total">
+          <label for="total">Total</label>
+          <input type="text" id="total" name="total" /><br /><br />
+        </section>
+        <label for="fname">Prénom</label>
+        <input type="text" id="fname" name="fname" /><br /><br />
+        <label for="lname">Nom</label>
+        <input type="text" id="lname" name="lname" /><br /><br />
+        <label for="e-mail">E-mail</label>
+        <input type="text" id="e-mail" name="e-mail" /><br /><br />
+        <input type="text" id="address" name="address" /><br /><br />
+        <label for="adress">Adresse</label>
+        <input type="text" id="city" name="city" /><br /><br />
+        <label for="city">Ville</label>
+        <input type="text" id="post-code" name="post-code" /><br /><br />
+        <label for="post-code">Code postal</label>
+        <input type="submit" value="Paiement" />
+      </form>
+    </main>
+    <footer>
+      <img class="media" src="/JWDP5/images/twitter.svg" alt="twitter" />
+      <img class="media" src="/JWDP5/images/facebook.svg" alt="facebook" />
+      <img class="media" src="/JWDP5/images/linkedin.svg" alt="linkedin" />
+      <img class="media" src="/JWDP5/images/instagram.svg" alt="instagram" />
+    </footer>
+    <script type="module" src="/js/cart.js"></script>
+  </body>
+</html>
