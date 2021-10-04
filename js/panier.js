@@ -1,4 +1,4 @@
-// POST request using fetch()
+/* POST request using fetch() */
 fetch("http://localhost:3000/api/cameras/order", {
   // Adding method type
   method: "POST",
@@ -23,7 +23,12 @@ fetch("http://localhost:3000/api/cameras/order", {
 })
 
   // API response
-  .then(function(commande)){
+  .then(function(commande) {
     //Stockage de la réponse de l'API dans le local storage key: stockCommande
-    localStorage.setItem("key", "value"); //key and value both should be string or number;
-  }
+    localStorage.setItem("order", JSON.stringify(commande)); //key and value both should be string or number
+  })
+  // Vider le panier après la réponse de l'API
+  localStorage.getItem
+  // Lien vers page confirmation après validation achat
+  document.location.href="confirmation.html";
+  localStorage.setItem("prixFinal");
