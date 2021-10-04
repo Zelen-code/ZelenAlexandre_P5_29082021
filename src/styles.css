@@ -68,18 +68,6 @@ footer {
     justify-content: space-evenly;
 }
 
-.cameras-photos {
-    width: 15rem;
-    border-radius: 50%;
-    height: 12rem;
-    transition: all 0.1s ease-in-out;
-    margin: 2rem;
-}
-
-.cameras-photos:hover {
-    transform: scale(1.1);
-}
-
 main {
     display: flex;
     justify-content: space-evenly;
