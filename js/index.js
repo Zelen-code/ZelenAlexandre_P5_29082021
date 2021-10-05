@@ -42,18 +42,6 @@ function createSelectForLenses(listOfLenses) {
 
 showContent()
 
-/*
-function createSelectForLenses(listOfLenses) {
-  let generatedHtml = document.createElement("select");
-  for (let i = 0; i < listOfLenses.length; i++) {
-    let option = document.createElement("option");
-    option.text = listOfLenses[i];
-    generatedHtml.add(option);
-  }
-  return generatedHtml;
-}
- */
-
 
 
 
