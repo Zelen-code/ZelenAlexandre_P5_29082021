@@ -24,7 +24,7 @@ async function showContent() {
             cameraElt.appendChild(linkElt);
             linkElt.appendChild(imageElt);
             cameraElt.appendChild(lensesElt);
-            document.getElementsByTagName("body")[0].appendChild(cameraElt);
+            document.getElementsByTagName("main")[0].appendChild(cameraElt);
         });
     } catch (e) {
     }
