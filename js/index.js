@@ -9,6 +9,7 @@ async function showContent() {
             let titreElt = document.createElement("h2");
             let descriptionElt = document.createElement("span");
             let priceElt = document.createElement("span");
+            let linkElt = document.createElement("a");
             let imageElt = document.createElement("img");
             let lensesElt = createSelectForLenses(camera.lenses);
             titreElt.innerHTML = camera.name;
@@ -16,10 +17,12 @@ async function showContent() {
             priceElt.innerHTML = camera.price;
             imageElt.src = camera.imageUrl;
             imageElt.classList.add("cameraPicture");
+            linkElt.href = './produit.html?_id=' + camera._id;
             cameraElt.appendChild(titreElt);
             cameraElt.appendChild(descriptionElt);
             cameraElt.appendChild(priceElt);
-            cameraElt.appendChild(imageElt);
+            cameraElt.appendChild(linkElt);
+            linkElt.appendChild(imageElt);
             cameraElt.appendChild(lensesElt);
             document.getElementsByTagName("body")[0].appendChild(cameraElt);
         });
@@ -37,6 +40,8 @@ function createSelectForLenses(listOfLenses) {
     return generatedHtml;
 }
 
+showContent()
+
 /*
 function createSelectForLenses(listOfLenses) {
   let generatedHtml = document.createElement("select");
@@ -49,6 +54,6 @@ function createSelectForLenses(listOfLenses) {
 }
  */
 
-showContent()
+
 
 

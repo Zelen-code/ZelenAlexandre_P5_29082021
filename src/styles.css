@@ -28,7 +28,7 @@ img.logo {
 
 .cameraPicture {
     border-radius: 50%;
-    margin: 20px 400px;
+    margin: auto;
     width: 350px;
     align-self: center;
 }
