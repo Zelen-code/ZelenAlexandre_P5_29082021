@@ -1,7 +1,5 @@
 body {
     text-align: center;
-    line-height: 20px;
-    font-size: large;
     margin: 2rem;
     background-color: #f3e9f1;
 }
@@ -14,12 +12,14 @@ div {
     border: solid 1px black;
     border-radius: 30px;
     margin: 20px;
+    padding: 20px;
 }
 
 select {
     width: 100px;
     align-self: center;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 img.logo {
@@ -33,7 +33,7 @@ img.logo {
     align-self: center;
 }
 
-div:hover {
+img:hover {
     cursor: pointer;
 }
 
@@ -102,4 +102,8 @@ input {
     font-size: x-large;
     margin: 15rem;
     line-height: 2rem;
+}
+
+span {
+    padding: 10px;
 }

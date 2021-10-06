@@ -1,5 +1,10 @@
 import fetchCameras from "../src/query.js";
 
+const formatter = new Intl.NumberFormat('fr-FR', {
+    style: 'currency',
+    currency: 'EUR',
+});
+
 async function showContent() {
     try {
         const cameras = await fetchCameras();
@@ -14,7 +19,7 @@ async function showContent() {
             let lensesElt = createSelectForLenses(camera.lenses);
             titreElt.innerHTML = camera.name;
             descriptionElt.innerHTML = camera.description;
-            priceElt.innerHTML = camera.price;
+            priceElt.innerHTML = formatter.format((camera.price) / 100);
             imageElt.src = camera.imageUrl;
             imageElt.classList.add("cameraPicture");
             linkElt.href = './produit.html?_id=' + camera._id;
