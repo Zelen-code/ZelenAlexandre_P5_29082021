@@ -44,6 +44,63 @@ function createSelectForLenses(listOfLenses) {
     return generatedHtml;
 }
 
+// Récupération des valeurs du formulaire
+
+let cameraElt = document.createElement("div");
+let titreElt = document.createElement("h2");
+let option = document.createElement("option");
+let priceElt = document.createElement("span");
+let optionsProduit = {
+    nomProduit: titreElt.nomProduit,
+    idProduit: cameraElt._id,
+    optionLens: option.optionLens,
+    quantity: 1,
+    prix: priceElt.prix / 100,
+};
+
+console.log(optionsProduit);
+
+// ---------------------------------- Le local storage --------------------------------
+
+// Sélection de l'id du formulaire
+// const idForm = document.querySelector("#option_produit"); //
+
+// Mettre le choix de l'utilisateur dans une variable
+//const choixForm = idFormValue;
+
+// Sélection du bouton Ajouter article au panier
+const btn_envoyerPanier = document.querySelector("#btn_envoyerPanier");
+
+// addEventListener - Écouter le bouton et envoyer le panier
+btn_envoyerPanier.addEventListener("click", (event) => {
+    event.preventDefault();
+
+// Déclaration de la variable //
+
+    let productRecordedInLocalStorage = JSON.parse(localStorage.getItem("produit"));
+
+// JSON.parse permet de convertir les données au format JSON (localisées dans le local storage) en objet JavaScript
+
+    console.log(productRecordedInLocalStorage);
+
+// S'il y a déjà des produits d'enregistré dans le local storage
+    if (productRecordedInLocalStorage) {
+        productRecordedInLocalStorage.push(optionsProduit);
+        localStorage.setItem("produit", JSON.stringify(productRecordedInLocalStorage));
+        console.log(productRecordedInLocalStorage);
+        popupConfirmation();
+    }
+// S'il n'y a pas de produit d'enregistré dans le local storage
+    else {
+        productRecordedInLocalStorage = [];
+        productRecordedInLocalStorage.push(optionsProduit);
+
+        console.log(productRecordedInLocalStorage);
+    }
+});
+
+
+
 
 
 

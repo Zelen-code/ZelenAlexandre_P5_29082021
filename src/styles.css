@@ -107,3 +107,12 @@ input {
 span {
     padding: 10px;
 }
+
+#btn_envoyerPanier {
+    font-style: oblique;
+    font-size: large;
+}
+
+#btn_envoyerPanier:hover {
+    cursor: pointer;
+}
