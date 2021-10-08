@@ -108,11 +108,11 @@ span {
     padding: 10px;
 }
 
-#btn_envoyerPanier {
-    font-style: oblique;
-    font-size: large;
+#btn_addToCart {
+    padding: 16px;
+    border-radius: 30px;
 }
 
-#btn_envoyerPanier:hover {
+#btn_addToCart:hover {
     cursor: pointer;
 }

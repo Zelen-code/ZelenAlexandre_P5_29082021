@@ -1,4 +1,4 @@
-// Récupération pour envoi des données //
+// Recovery in order to send the data //
 
 fetch("http://localhost:3000/api/cameras/order", {
 
@@ -24,26 +24,24 @@ fetch("http://localhost:3000/api/cameras/order", {
 })
 
     // API response
-    .then(function (commande) {
-        //Stockage de la réponse de l'API dans le local storage key: stockCommande
-        localStorage.setItem("order", JSON.stringify(commande)); //key and value both should be string or number
+    .then(function (order) {
+        // storage of the response of API in the localStorage
+        localStorage.setItem("order", JSON.stringify(order)); // key and value both should be string or number
     })
-// Vider le panier après la réponse de l'API
+// empty the cart after API response
 localStorage.getItem
-// Lien vers page confirmation après validation achat
+// link to confirmation.html
 document.location.href = "confirmation.html";
-localStorage.setItem("prixFinal");
+localStorage.setItem("finalPrice");
 
 
 /*
-- Mettre sur la page produit, un bouton ajouter au panier.
-Qui ajoute le produit dans le Local storage
-- Faire un bouton voir le panier qui redirige vers une page panier.html qui doit afficher le contenu du local storage
-Ce sera déjà très bien pour aujourd'hui. L'étape suivante sera :
-- Faire le bouton commander.
+- put on the product.html an add button which adds the product in the localStorage
+- do a button "see the cart" which redirects to cart.html (which displays the localStorage content)
+- do the button "order"
  */
 /*
-- "écouter" l'id du produit, et la quantité
-- les extraire
-- concept de scope
+- "listen to the id, to the quantity"
+- extract them
+- scope concept
  */
