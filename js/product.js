@@ -43,9 +43,9 @@ function createSelectForLenses(listOfLenses) {
     return generatedHtml;
 }
 
-// localStorage
+// ------------------------------------ localStorage --------------------------------- //
 
-// selection of add button
+// select add button
 const btn_addToCart = document.querySelector("#btn_addToCart");
 console.log(btn_addToCart)
 
@@ -53,28 +53,40 @@ console.log(btn_addToCart)
 btn_addToCart.addEventListener("click", (event) => {
     event.preventDefault();
 
-// variable declaration //
-
-    let productRecordedInLocalStorage = JSON.parse(localStorage.getItem("product"));
-
-// JSON.parse allows to convert from JSON format into JS object
-
-    console.log(productRecordedInLocalStorage);
-
-// if there are already recorded products in the localStorage
-    if (productRecordedInLocalStorage) {
-        productRecordedInLocalStorage.push(optionsProduct);
-        localStorage.setItem("product", JSON.stringify(productRecordedInLocalStorage));
-        console.log(productRecordedInLocalStorage);
-    }
-// If there aren't any products recorded in the localStorage
-    else {
-        productRecordedInLocalStorage = [];
-        productRecordedInLocalStorage.push(optionsProduct);
-
-        console.log(productRecordedInLocalStorage);
-    }
+    let items = ["name", "description", "price", "cameraPicture", "lenses"];
+    localStorage.setItem("myItems", JSON.stringify(items)); //store items
+    let storedItems = JSON.parse(localStorage.getItem("myItems")); //get them back
+    console.log(storedItems)
 });
+
+//
+function addEntry() {
+    // Parse any JSON previously stored in allEntries
+    var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
+    if (existingEntries == null) existingEntries = [];
+    var entryTitle = document.getElementById("entryTitle").value;
+    var entryText = document.getElementById("entryText").value;
+    var entry = {
+        "title": entryTitle,
+        "text": entryText
+    };
+    localStorage.setItem("entry", JSON.stringify(entry));
+    // Save allEntries back to local storage
+    existingEntries.push(entry);
+    localStorage.setItem("allEntries", JSON.stringify(existingEntries));
+}
+
+//
+var testObject = {'one': 1, 'two': 2, 'three': 3};
+
+// Put the object into storage
+localStorage.setItem('testObject', JSON.stringify(testObject));
+
+// Retrieve the object from storage
+var retrievedObject = localStorage.getItem('testObject');
+
+console.log('retrievedObject: ', JSON.parse(retrievedObject));
+
 
 
 
