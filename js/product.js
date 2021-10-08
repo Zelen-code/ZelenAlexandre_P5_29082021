@@ -3,7 +3,11 @@ const formatter = new Intl.NumberFormat('fr-FR', {
     style: 'currency',
     currency: 'EUR',
 });
+
+// retrieve URL
 const url = new URLSearchParams(window.location.search);
+
+// stock id
 const id = url.get("_id");
 console.log(id);
 console.log(server + "/" + id);
@@ -25,6 +29,7 @@ function showContent(camera) {
     priceElt.innerHTML = formatter.format((camera.price) / 100);
     imageElt.src = camera.imageUrl;
     imageElt.classList.add("cameraPicture");
+    lensesElt.classList.add("cameraLenses");
     cameraElt.appendChild(titleElt);
     cameraElt.appendChild(descriptionElt);
     cameraElt.appendChild(priceElt);
@@ -43,11 +48,24 @@ function createSelectForLenses(listOfLenses) {
     return generatedHtml;
 }
 
-// ------------------------------------ localStorage --------------------------------- //
+// select addToCart button
+const btn_addToShoppingCart = document.querySelector("#btn_addToShoppingCart");
+console.log(btn_addToShoppingCart)
 
-// select add button
-const btn_addToCart = document.querySelector("#btn_addToCart");
-console.log(btn_addToCart)
+// send to localStorage
+const addToLocalStorage = shoppingCart => {
+    localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
+};
+
+// options choice
+for (let lenses of camera.lenses) {
+    document.getElementsByClassName('cameraLenses').innerHTML +=
+        `option value="1">${lenses}</option`
+}
+
+// add to shoppingCart fonction
+
+const add
 
 // addEventListener
 btn_addToCart.addEventListener("click", (event) => {
@@ -59,7 +77,8 @@ btn_addToCart.addEventListener("click", (event) => {
     console.log(storedItems)
 });
 
-//
+/* --------------------------------------------------------------
+
 function addEntry() {
     // Parse any JSON previously stored in allEntries
     var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
@@ -76,7 +95,11 @@ function addEntry() {
     localStorage.setItem("allEntries", JSON.stringify(existingEntries));
 }
 
-//
+ ------------------------------------------ */
+
+
+/* -------------------------------------------
+
 var testObject = {'one': 1, 'two': 2, 'three': 3};
 
 // Put the object into storage
@@ -86,6 +109,8 @@ localStorage.setItem('testObject', JSON.stringify(testObject));
 var retrievedObject = localStorage.getItem('testObject');
 
 console.log('retrievedObject: ', JSON.parse(retrievedObject));
+
+------------------------------------------------ */
 
 
 
