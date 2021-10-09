@@ -26,9 +26,8 @@ img.logo {
     width: 15rem;
 }
 
-.cameraPicture {
+img.cameraPicture {
     border-radius: 50%;
-    margin: auto;
     width: 350px;
     align-self: center;
 }
@@ -43,7 +42,7 @@ img:hover {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     .cameraPicture {
         width: 180px;
     }
@@ -51,10 +50,6 @@ img:hover {
 
 .media {
     width: 3rem;
-}
-
-.shopping-cart {
-    width: 4rem;
 }
 
 header {
@@ -108,11 +103,9 @@ span {
     padding: 10px;
 }
 
-#btn_addToCart {
-    padding: 16px;
-    border-radius: 30px;
-}
-
-#btn_addToCart:hover {
-    cursor: pointer;
+button {
+    width: 8rem;
+    height: 2rem;
+    align-self: center;
+    border-radius: 20px;
 }
