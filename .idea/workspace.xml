@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="45b6073b-cb36-488a-b58d-b0f39dc52092" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Projet 5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/produit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/panier.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/confirmation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/product.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/panier.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/html/produit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/valider.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/confirmation.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="ProjectId" id="1yuDiN3fuWRBNbJfJLUOI2Bm7pM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="code.cleanup.on.save" value="true" />
+    <property name="format.on.save" value="true" />
+    <property name="js.last.introduce.type" value="LET" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="optimize.imports.on.save" value="true" />
+    <property name="rearrange.code.on.save" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="index.js" working-dir="$PROJECT_DIR$/js">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.index.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="45b6073b-cb36-488a-b58d-b0f39dc52092" name="Changes" comment="" />
+      <created>1633092711624</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1633092711624</updated>
+      <workItem from="1633092718211" duration="2536000" />
+      <workItem from="1633109335726" duration="1072000" />
+      <workItem from="1633160271826" duration="814000" />
+      <workItem from="1633161739823" duration="6250000" />
+      <workItem from="1633189323218" duration="1617000" />
+      <workItem from="1633192560085" duration="3809000" />
+      <workItem from="1633196665826" duration="28000" />
+      <workItem from="1633197039796" duration="2537000" />
+      <workItem from="1633248309309" duration="4190000" />
+      <workItem from="1633258123342" duration="292000" />
+      <workItem from="1633267971588" duration="69000" />
+      <workItem from="1633284605366" duration="1364000" />
+      <workItem from="1633333061088" duration="604000" />
+      <workItem from="1633342643272" duration="2854000" />
+      <workItem from="1633348782256" duration="1491000" />
+      <workItem from="1633356929701" duration="6777000" />
+      <workItem from="1633426966401" duration="9370000" />
+      <workItem from="1633507233616" duration="2941000" />
+      <workItem from="1633516923289" duration="7113000" />
+      <workItem from="1633613665170" duration="8166000" />
+      <workItem from="1633640132622" duration="2524000" />
+      <workItem from="1633676774656" duration="3910000" />
+      <workItem from="1633683431870" duration="9352000" />
+      <workItem from="1633712596065" duration="2902000" />
+      <workItem from="1633769312691" duration="18233000" />
+      <workItem from="1633808800740" duration="3851000" />
+      <workItem from="1633814799066" duration="532000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/ZelenAlexandre_P5_29082021" />
+    </ignored-roots>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
