@@ -14,12 +14,17 @@ const id = url.get("_id");
 console.log(id);
 console.log(server + "/" + id);
 
+var camera = {}
+
 fetch(server + "/" + id)
     .then((res) => res.json())
-    .then((camera) => showContent(camera))
+    .then((_camera) => {
+        camera = _camera
+        showContent()
+    })
     .catch((err) => console.log(err));
 
-function showContent(camera) {
+function showContent() {
     let cameraElt = createCameraElement(camera.element);
     let titleElt = createTitleElement(camera.title);
     let descriptionElt = createDescriptionElement(camera.description);
@@ -32,7 +37,8 @@ function showContent(camera) {
     priceElt.innerHTML = formatter.format((camera.price) / 100);
     imageElt.src = camera.imageUrl;
     imageElt.classList.add("cameraPicture");
-    buttonElt.innerHTML = camera.button;
+    //buttonElt.innerHTML = camera.button;
+    buttonElt.classList.add("cameraButton");
     cameraElt.appendChild(titleElt);
     cameraElt.appendChild(descriptionElt);
     cameraElt.appendChild(priceElt);
@@ -98,7 +104,26 @@ function createSelectForLenses(listOfLenses) {
 // -- function button -- //
 
 function createButtonElement() {
-    let generatedHtml;
-    generatedHtml = document.createElement("button");
-    return generatedHtml;
+    let btn;
+    btn = document.createElement('input');
+    btn.value = 'ajouter au panier';
+    btn.type = 'button';
+    btn.addEventListener("click", onClickShoppingCartButton);
+    return btn;
 }
+
+function onClickShoppingCartButton() {
+    console.log("bouton cliqué", camera, document.getElementsByTagName("select")[0].value)
+    camera.selectedLens = document.getElementsByTagName("select")[0].value;
+    console.log("before save", camera)
+    let cart = JSON.parse(localStorage.getItem("cart"))
+    console.log("cart", cart)
+    if (cart == null) {
+        cart = []
+    }
+    cart.push(camera)
+    console.log("cart2", cart)
+    localStorage.setItem("cart", JSON.stringify(cart))
+}
+
+
