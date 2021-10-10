@@ -37,7 +37,6 @@ function showContent() {
     priceElt.innerHTML = formatter.format((camera.price) / 100);
     imageElt.src = camera.imageUrl;
     imageElt.classList.add("cameraPicture");
-    //buttonElt.innerHTML = camera.button;
     buttonElt.classList.add("cameraButton");
     cameraElt.appendChild(titleElt);
     cameraElt.appendChild(descriptionElt);
@@ -106,7 +105,7 @@ function createSelectForLenses(listOfLenses) {
 function createButtonElement() {
     let btn;
     btn = document.createElement('input');
-    btn.value = 'ajouter au panier';
+    btn.value = 'Ajouter au panier';
     btn.type = 'button';
     btn.addEventListener("click", onClickShoppingCartButton);
     return btn;
