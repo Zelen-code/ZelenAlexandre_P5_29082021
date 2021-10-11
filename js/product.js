@@ -33,21 +33,23 @@ function showContent() {
     let lensesElt = createSelectForLenses(camera.lenses);
     let buttonElt = createButtonElement(camera.button);
     let shoppingCartButtonElt = createShoppingCartButton(camera.button);
+    let linkElt = document.createElement("a");
     titleElt.innerHTML = camera.name;
     descriptionElt.innerHTML = camera.description;
     priceElt.innerHTML = formatter.format((camera.price) / 100);
     imageElt.src = camera.imageUrl;
     imageElt.classList.add("cameraPicture");
     shoppingCartButtonElt.classList.add("shoppingCartButton");
+    linkElt.href = './cart.html';
     cameraElt.appendChild(titleElt);
     cameraElt.appendChild(descriptionElt);
     cameraElt.appendChild(priceElt);
     cameraElt.appendChild(imageElt);
     cameraElt.appendChild(lensesElt);
     cameraElt.appendChild(buttonElt);
-    cameraElt.appendChild(shoppingCartButtonElt);
+    linkElt.appendChild(shoppingCartButtonElt);
     document.getElementsByTagName("main")[0].appendChild(cameraElt);
-    document.getElementsByTagName("header")[0].appendChild(shoppingCartButtonElt);
+    document.getElementsByTagName("header")[0].appendChild(linkElt);
 }
 
 function createShoppingCartButton() {
@@ -62,12 +64,6 @@ function createShoppingCartButton() {
 function createCameraElement() {
     let generatedHtml;
     generatedHtml = document.createElement("div");
-    return generatedHtml;
-}
-
-function createHeaderElement() {
-    let generatedHtml;
-    generatedHtml = document.createElement("header");
     return generatedHtml;
 }
 
@@ -128,15 +124,23 @@ function createButtonElement() {
 }
 
 function onClickShoppingCartButton() {
-    //console.log("bouton cliqué", camera, document.getElementsByTagName("select")[0].value)
+
+    // -- console.log("clicked button", camera, document.getElementsByTagName("select")[0].value) -- //
+
     camera.selectedLens = document.getElementsByTagName("select")[0].value;
-    //console.log("before save", camera)
+
+    // -- console.log("before save", camera) -- //
+
     let cart = JSON.parse(localStorage.getItem("cart"))
-    //console.log("cart", cart)
+
+    // -- console.log("cart", cart) -- //
+
     if (cart == null) {
         cart = []
     }
     cart.push(camera)
-    //console.log("cart2", cart)
+
+    console.log("cart2", cart)
+
     localStorage.setItem("cart", JSON.stringify(cart))
 }
