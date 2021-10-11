@@ -14,7 +14,7 @@ const id = url.get("_id");
 console.log(id);
 console.log(server + "/" + id);
 
-var camera = {}
+let camera = {};
 
 fetch(server + "/" + id)
     .then((res) => res.json())
@@ -32,19 +32,29 @@ function showContent() {
     let imageElt = createImageElement(camera.image);
     let lensesElt = createSelectForLenses(camera.lenses);
     let buttonElt = createButtonElement(camera.button);
+    let shoppingCartButtonElt = createShoppingCartButton(camera.button);
     titleElt.innerHTML = camera.name;
     descriptionElt.innerHTML = camera.description;
     priceElt.innerHTML = formatter.format((camera.price) / 100);
     imageElt.src = camera.imageUrl;
     imageElt.classList.add("cameraPicture");
-    buttonElt.classList.add("cameraButton");
+    shoppingCartButtonElt.classList.add("shoppingCartButton");
     cameraElt.appendChild(titleElt);
     cameraElt.appendChild(descriptionElt);
     cameraElt.appendChild(priceElt);
     cameraElt.appendChild(imageElt);
     cameraElt.appendChild(lensesElt);
     cameraElt.appendChild(buttonElt);
+    cameraElt.appendChild(shoppingCartButtonElt);
     document.getElementsByTagName("main")[0].appendChild(cameraElt);
+    document.getElementsByTagName("header")[0].appendChild(shoppingCartButtonElt);
+}
+
+function createShoppingCartButton() {
+    let btn = document.createElement('input')
+    btn.value = 'Panier';
+    btn.type = 'button';
+    return btn
 }
 
 // -- functions for elements of camera -- //
@@ -52,6 +62,12 @@ function showContent() {
 function createCameraElement() {
     let generatedHtml;
     generatedHtml = document.createElement("div");
+    return generatedHtml;
+}
+
+function createHeaderElement() {
+    let generatedHtml;
+    generatedHtml = document.createElement("header");
     return generatedHtml;
 }
 
@@ -112,17 +128,15 @@ function createButtonElement() {
 }
 
 function onClickShoppingCartButton() {
-    console.log("bouton cliqué", camera, document.getElementsByTagName("select")[0].value)
+    //console.log("bouton cliqué", camera, document.getElementsByTagName("select")[0].value)
     camera.selectedLens = document.getElementsByTagName("select")[0].value;
-    console.log("before save", camera)
+    //console.log("before save", camera)
     let cart = JSON.parse(localStorage.getItem("cart"))
-    console.log("cart", cart)
+    //console.log("cart", cart)
     if (cart == null) {
         cart = []
     }
     cart.push(camera)
-    console.log("cart2", cart)
+    //console.log("cart2", cart)
     localStorage.setItem("cart", JSON.stringify(cart))
 }
-
-
