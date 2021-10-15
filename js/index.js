@@ -27,10 +27,10 @@ async function showContent() {
             linkElt.href = './product.html?_id=' + camera._id;
             cameraElt.appendChild(titleElt);
             cameraElt.appendChild(descriptionElt);
-            cameraElt.appendChild(priceElt);
             cameraElt.appendChild(linkElt);
             linkElt.appendChild(imageElt);
             cameraElt.appendChild(lensesElt);
+            cameraElt.appendChild(priceElt);
             document.getElementsByTagName("main")[0].appendChild(cameraElt);
         });
     } catch (e) {
