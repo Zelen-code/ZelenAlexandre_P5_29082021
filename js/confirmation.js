@@ -1,3 +1,3 @@
 const url = new URLSearchParams(window.location.search);
 const id = url.get("orderId");
-console.log("he", id)
+document.getElementById("message").innerHTML = "Votre numéro de commande est le n° " + id;
