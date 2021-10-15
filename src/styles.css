@@ -11,8 +11,8 @@ div {
     box-shadow: 5px 5px 15px 5px #000000;
     border: solid 1px black;
     border-radius: 30px;
-    margin: 20px;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
 select {
@@ -81,8 +81,7 @@ form {
 }
 
 input {
-    margin: 5px 0;
-    width: 8rem;
+    width: 12rem;
     height: 2rem;
     align-self: center;
     border-radius: 20px;
@@ -112,4 +111,62 @@ span {
 
 .shoppingCartButton {
     height: 4rem;
+    width: 4rem;
+}
+
+h2 {
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.priceElt {
+    font-style: italic;
+}
+
+.cameraElement {
+    object-fit: contain;
+    height: 14rem;
+    width: 20rem;
+}
+
+.imgElement {
+    object-fit: contain;
+}
+
+#formSection {
+    height: 30rem;
+}
+
+label {
+    align-self: center;
+    font-style: italic;
+    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+}
+
+#paiement {
+    height: 3rem;
+}
+
+#cartSection {
+    width: 23rem;
+}
+
+@media (max-width: 720px) {
+    #formSection {
+        margin-top: 2rem;
+    }
+}
+
+#eMail {
+    margin-bottom: 2rem;
+}
+
+#clearBasket {
+    height: 2rem;
+    width: 8rem;
+}
+
+#clearButtonSection {
+    height: 2rem;
 }

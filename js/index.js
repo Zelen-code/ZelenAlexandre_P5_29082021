@@ -22,6 +22,8 @@ async function showContent() {
             priceElt.innerHTML = formatter.format((camera.price) / 100);
             imageElt.src = camera.imageUrl;
             imageElt.classList.add("cameraPicture");
+            imageElt.classList.add("imgElement");
+            priceElt.classList.add("priceElt");
             linkElt.href = './product.html?_id=' + camera._id;
             cameraElt.appendChild(titleElt);
             cameraElt.appendChild(descriptionElt);

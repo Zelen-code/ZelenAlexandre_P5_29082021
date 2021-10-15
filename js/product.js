@@ -11,8 +11,8 @@ const url = new URLSearchParams(window.location.search);
 // -- store id -- //
 
 const id = url.get("_id");
-console.log(id);
-console.log(server + "/" + id);
+//console.log(id);
+//console.log(server + "/" + id);
 
 let camera = {};
 
@@ -40,6 +40,7 @@ function showContent() {
     imageElt.src = camera.imageUrl;
     imageElt.classList.add("cameraPicture");
     shoppingCartButtonElt.classList.add("shoppingCartButton");
+    priceElt.classList.add("priceElt");
     linkElt.href = './cart.html';
     cameraElt.appendChild(titleElt);
     cameraElt.appendChild(descriptionElt);
@@ -125,22 +126,23 @@ function createButtonElement() {
 
 function onClickShoppingCartButton() {
 
-    // -- console.log("clicked button", camera, document.getElementsByTagName("select")[0].value) -- //
+    // ---- console.log("clicked button", camera, document.getElementsByTagName("select")[0].value) ---- //
 
     camera.selectedLens = document.getElementsByTagName("select")[0].value;
 
-    // -- console.log("before save", camera) -- //
+    // ---- console.log("before save", camera) ---- //
 
     let cart = JSON.parse(localStorage.getItem("cart"))
 
-    // -- console.log("cart", cart) -- //
+    // ---- console.log("cart", cart) ---- //
+
 
     if (cart == null) {
         cart = []
     }
     cart.push(camera)
 
-    console.log("cart2", cart)
+    // ---- console.log("cart2", cart) ---- //
 
     localStorage.setItem("cart", JSON.stringify(cart))
 }

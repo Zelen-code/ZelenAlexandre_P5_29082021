@@ -13,32 +13,21 @@
 	<a href="index.html"><img alt="logo" class="logo" src="/server/images/logo-orinoco.png"/></a>
 </header>
 <main>
-	<form action="">
-		<label for="product">Article</label>
-		<input id="product" name="product" type="text"/><br/><br/>
-		<label for="price">Prix</label>
-		<input id="price" name="price" type="text"/><br/><br/>
-		<label for="articles">Quantité</label>
-		<input id="articles" max="10" min="0" name="articles" type="number"/>
-		<br/>
-		<section class="total">
-			<label for="total">Total</label>
-			<input id="total" name="total" type="text"/><br/><br/>
-		</section>
+	<div id="cartSection"></div>
+	<div id="clearButtonSection"><input id="clearButton" type="reset" value="Vider le panier"/></div>
+	<div id="formSection">
 		<label for="firstName">Prénom</label>
-		<input id="firstName" name="firstName" type="text"/><br/><br/>
+		<input id="firstName" name="firstName" type="text"/>
 		<label for="lastName">Nom</label>
-		<input id="lastName" name="lastName" type="text"/><br/><br/>
-		<label for="e-mail">E-mail</label>
-		<input id="e-mail" name="e-mail" type="text"/><br/><br/>
+		<input id="lastName" name="lastName" type="text"/>
 		<label for="address">Adresse</label>
-		<input id="address" name="address" type="text"/><br/><br/>
+		<input id="address" name="address" type="text"/>
 		<label for="city">Ville</label>
-		<input id="city" name="city" type="text"/><br/><br/>
-		<label for="post-code">Code postal</label>
-		<input id="post-code" name="post-code" type="text"/><br/><br/>
-		<input type="submit" value="Paiement"/>
-	</form>
+		<input id="city" name="city" type="text"/>
+		<label for="eMail">E-mail</label>
+		<input id="eMail" name="e-mail" type="text"/>
+		<input id="paiement" type="submit" value="Paiement"/>
+	</div>
 </main>
 <footer>
 	<img alt="twitter" class="media" src="/server/images/twitter.svg"/>
