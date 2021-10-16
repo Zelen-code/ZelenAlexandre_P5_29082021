@@ -20,7 +20,7 @@ img.logo {
 img.cameraPicture {
     width: 350px;
     align-self: center;
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 img:hover {
@@ -85,7 +85,7 @@ input:hover {
 }
 
 .priceElt {
-    margin-top: 20px;
+    margin-top: 10px;
     align-self: center;
 }
 
@@ -126,7 +126,6 @@ label {
 }
 
 #clearButtonSection {
-    border: 1px solid white;
     width: 80rem;
     margin: 2rem;
 }
@@ -137,7 +136,7 @@ label {
 }
 
 h2 {
-    margin-top: 2rem;
+    margin: 2rem 0;
 }
 
 span {
@@ -160,4 +159,14 @@ span {
 
 .addToBasketButton {
     margin-top: 2rem;
+}
+
+h3 {
+    margin-bottom: 0;
+}
+
+#finalPrice {
+    margin: 2rem AUTO;
+    align-self: center;
+    font-style: italic;
 }

@@ -5,7 +5,8 @@ const formatter = new Intl.NumberFormat('fr-FR', {
     currency: 'EUR',
 });
 
-const regexMail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const
+    regexMail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 let paiement = document.getElementById("paiement");
 
@@ -47,9 +48,6 @@ paiement.addEventListener("click", (event) => {
             .then((data) => {
                 console.log(data.orderId)
                 document.location.href = "./confirmation.html?orderId=" + data.orderId;
-
-                //final price --> localStorage.setItem("finalPrice")
-
             })
             .catch((erreur) => console.log("erreur:" + erreur));
 
@@ -102,6 +100,31 @@ function showCartShopping() {
             displayCartShoppingElement.appendChild(lensesElt);
             displayCartShoppingElement.appendChild(priceElt);
         })
+        // -- set variable in order to insert the prices existing in the cart shopping -- //
+        let finalPrice = [];
+
+// -- search prices in the cart shopping -- //
+        for (let i = 0; i < cart.length; i++) {
+            let finalPriceInTheCartShopping = cart[i].price;
+
+            // -- put prices of cart shopping in the variable -- //
+            finalPrice.push(finalPriceInTheCartShopping)
+
+            console.log(finalPrice);
+        }
+        // -- add prices existing in the variable with method reduce -- //
+        const reducer = (accumulator, currentValue) => accumulator + currentValue;
+        const totalPrice = finalPrice.reduce(reducer);
+        console.log(totalPrice);
+
+        // -- display totalPrice to HTML -- //
+        const showFinalPriceToHtml = `<div id= "showFinalPrice">Le prix total est de : ${totalPrice} € </div>`
+
+        const insertFinalPrice = document.querySelector("#finalPrice");
+        console.log(insertFinalPrice);
+
+        // -- insert HTML in the cart shopping -- //
+        insertFinalPrice.insertAdjacentHTML("beforeend", showFinalPriceToHtml);
     }
     initClearBasketListener()
 }
