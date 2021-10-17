@@ -1,6 +1,24 @@
+@font-face {
+    font-family: 'Daily Challenge DEMO';
+    src: url('./DailyChallenge/DailyChallengeDEMO-Regular.eot');
+    src: url('./DailyChallenge/DailyChallengeDEMO-Regular.eot?#iefix') format('embedded-opentype'),
+    url('./DailyChallenge/DailyChallengeDEMO-Regular.woff2') format('woff2'),
+    url('./DailyChallenge/DailyChallengeDEMO-Regular.woff') format('woff'),
+    url('./DailyChallenge/DailyChallengeDEMO-Regular.ttf') format('truetype'),
+    url('./DailyChallenge/DailyChallengeDEMO-Regular.svg#DailyChallengeDEMO-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     text-align: center;
     margin: 2rem;
+    font-family: "Daily Challenge DEMO", sans-serif;
+    background: #C57965;
+    background: -moz-linear-gradient(left, #C57965 0%, #AD6BA7 50%, #915CF5 100%);
+    background: -webkit-linear-gradient(left, #C57965 0%, #AD6BA7 50%, #915CF5 100%);
+    background: linear-gradient(to right, #C57965 0%, #AD6BA7 50%, #915CF5 100%);
 }
 
 div {
@@ -169,4 +187,8 @@ h3 {
     margin: 2rem AUTO;
     align-self: center;
     font-style: italic;
+}
+
+#message {
+    line-height: 2.5rem;
 }

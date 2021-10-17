@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Daily Challenge DEMO';
+    src: url('DailyChallengeDEMO-Regular.eot');
+    src: url('DailyChallengeDEMO-Regular.eot?#iefix') format('embedded-opentype'),
+        url('DailyChallengeDEMO-Regular.woff2') format('woff2'),
+        url('DailyChallengeDEMO-Regular.woff') format('woff'),
+        url('DailyChallengeDEMO-Regular.ttf') format('truetype'),
+        url('DailyChallengeDEMO-Regular.svg#DailyChallengeDEMO-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
