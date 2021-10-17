@@ -8,7 +8,7 @@ const formatter = new Intl.NumberFormat('fr-FR', {
 let paiement = document.getElementById("paiement");
 
 // -- event listener -- //
-
+/*
 paiement.addEventListener("click", (event) => {
         console.log("paiement")
         event.preventDefault();
@@ -49,7 +49,7 @@ paiement.addEventListener("click", (event) => {
             .catch((erreur) => console.log("erreur:" + erreur));
 
     }
-)
+) */
 
 // -- function clearBasket -- //
 
@@ -97,6 +97,48 @@ function showCartShopping() {
             displayCartShoppingElement.appendChild(lensesElt);
             displayCartShoppingElement.appendChild(priceElt);
         })
+
+        paiement.addEventListener("click", (event) => {
+                console.log("paiement")
+                event.preventDefault();
+
+                // -- Prepare data to send to Post -- //
+
+                let contact = {
+                    firstName: document.getElementById("firstName").value,
+                    lastName: document.getElementById("lastName").value,
+                    address: document.getElementById("address").value,
+                    city: document.getElementById("city").value,
+                    email: document.getElementById("eMail").value,
+                };
+                console.log("hello", contact)
+
+                let cart = JSON.parse(localStorage.getItem("cart"));
+                if (!cart) {
+                    return
+                }
+                console.log("coucou", cart)
+                let products = cart.map(product => product._id)
+                console.log(JSON.stringify({contact, products}))
+                // -- Post -- //
+
+                fetch("http://localhost:3000/api/cameras/order", {
+                    method: "POST",
+                    headers: {
+                        "accept": "application.json",
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({contact, products})
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        console.log(data.orderId)
+                        document.location.href = "./confirmation.html?orderId=" + data.orderId + "&totalCount=" + totalPrice;
+                    })
+                    .catch((erreur) => console.log("erreur:" + erreur));
+
+            }
+        )
 
         // -- set variable in order to insert the prices existing in the cart shopping -- //
 

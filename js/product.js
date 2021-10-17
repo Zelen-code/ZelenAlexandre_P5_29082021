@@ -137,7 +137,6 @@ function onClickShoppingCartButton() {
 
     // ---- console.log("cart", cart) ---- //
 
-
     if (cart == null) {
         cart = []
     }

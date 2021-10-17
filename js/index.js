@@ -1,4 +1,7 @@
+// import resources
 import fetchCameras from "../src/query.js";
+
+console.log(fetchCameras)
 
 const formatter = new Intl.NumberFormat('fr-FR', {
     style: 'currency',
