@@ -56,7 +56,7 @@ function showContent() {
 
 function createShoppingCartButton() {
     let btn = document.createElement('input')
-    btn.value = 'Panier';
+    btn.value = '💵 Panier 💶';
     btn.type = 'button';
     return btn
 }

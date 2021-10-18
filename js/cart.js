@@ -26,7 +26,7 @@ function createCartElement(cart) {
     if (cart) {
         cartMessage.textContent = "Contenu de votre panier 😀";
     } else {
-        cartMessage.textContent = "Votre panier est vide... 😥";
+        cartMessage.textContent = "En manque d'inspiration ? 😰";
     }
     return cartMessage
 }
