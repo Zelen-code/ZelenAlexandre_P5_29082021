@@ -26,7 +26,7 @@ function createCartElement(cart) {
     if (cart) {
         cartMessage.textContent = "Contenu de votre panier 😀";
     } else {
-        cartMessage.textContent = "Votre panier est vide";
+        cartMessage.textContent = "Votre panier est vide... 😥";
     }
     return cartMessage
 }
@@ -122,7 +122,7 @@ function showCartShopping() {
 
         // -- display totalPrice to HTML -- //
 
-        const showFinalPriceToHtml = `<div id= "showFinalPrice">Le prix total est de : ${totalPrice} € </div>`
+        const showFinalPriceToHtml = `<div id= "showFinalPrice">Le prix total de votre panier est de : ${totalPrice} € </div>`
 
         const insertFinalPrice = document.querySelector("#finalPrice");
         console.log(insertFinalPrice);

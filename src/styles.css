@@ -4,16 +4,19 @@ body {
     background: #C57965;
     background: linear-gradient(to right, #C57965 0%, #AD6BA7 50%, #915CF5 100%);
     color: midnightblue;
+    scroll-behavior: smooth;
 }
 
 div {
     display: flex;
     flex-direction: column;
+    margin-top: 1rem;
 }
 
 select {
     align-self: center;
     border-radius: 10px;
+    height: 1.5rem;
 }
 
 img.logo {
@@ -44,6 +47,7 @@ img:hover {
 
 .media {
     width: 3rem;
+    margin: 1rem;
 }
 
 header {
@@ -55,7 +59,7 @@ header {
 footer {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 4rem;
+    margin-top: 6rem;
 }
 
 main {
@@ -75,6 +79,7 @@ input {
     align-self: center;
     border-radius: 10px;
     border: 1px solid midnightblue;
+    height: 1.5rem;
 }
 
 input:hover {
@@ -96,8 +101,9 @@ input:hover {
 }
 
 .priceElt {
-    margin-top: 10px;
+    margin: 10px;
     align-self: center;
+    font-style: normal;
 }
 
 .cameraElement {
@@ -177,15 +183,15 @@ span {
 
 #message {
     font-size: x-large;
-    margin-top: 2rem;
+    margin-top: 5rem;
 }
 
 .addToBasketButton {
     margin-top: 2rem;
-    border: solid 2px whitesmoke;
+    border: solid 2px midnightblue;
     height: 2rem;
-    background: midnightblue;
-    color: whitesmoke;
+    background: lightsteelblue;
+    color: midnightblue;
     border-radius: 10px;
 }
 
@@ -194,9 +200,9 @@ h3 {
 }
 
 #finalPrice {
-    margin: 2rem AUTO;
     align-self: center;
     font-style: italic;
+    margin-bottom: 1rem;
 }
 
 #message {
@@ -204,9 +210,14 @@ h3 {
 }
 
 .shoppingCartButton {
-    border: solid 2px white;
+    border: solid 2px midnightblue;
     height: 2rem;
-    background: midnightblue;
-    color: whitesmoke;
+    background: lightsteelblue;
+    color: midnightblue;
     border-radius: 10px;
+}
+
+#showFinalPrice {
+    margin: 1rem;
+    font-weight: bold;
 }
