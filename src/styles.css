@@ -228,3 +228,7 @@ h3 {
     margin: 1rem;
     font-weight: bold;
 }
+
+#firstName, #lastName, #address, #city, #eMail {
+    width: 17rem;
+}

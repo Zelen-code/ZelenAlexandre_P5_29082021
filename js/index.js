@@ -2,18 +2,18 @@
 
 import fetchCameras from "../src/query.js";
 
-//console.log(fetchCameras)
+// -- check import fetchCameras -- //
 
-new Intl.NumberFormat('fr-FR', {
-    style: 'currency',
-    currency: 'EUR',
-});
+console.log(fetchCameras)
 
 async function showContent() {
     try {
         const cameras = await fetchCameras();
         cameras.forEach((camera) => {
-            console.log(camera);
+
+            // -- check each object of the array -- //
+
+            console.log(camera)
             let cameraElt = document.createElement("div");
             let linkElt = document.createElement("a");
             let imageElt = document.createElement("img");

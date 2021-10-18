@@ -1,13 +1,13 @@
-const order = document.getElementById("order");
-
-// -- Const -- //
+// -- declaration of const -- //
 
 const formatter = new Intl.NumberFormat('fr-FR', {
     style: 'currency',
     currency: 'EUR',
 });
 
-let paiement = document.getElementById("paiement");
+// -- select elementId for payment -- //
+
+const paiement = document.getElementById("paiement");
 
 // -- function clearBasket -- //
 
@@ -15,6 +15,9 @@ function initClearBasketListener() {
     const buttonClearBasket = document.getElementById("clearButton");
     buttonClearBasket.addEventListener("click", () => {
         localStorage.setItem("cart", null)
+
+        // -- this method reloads the current URL -- //
+
         location.reload();
     });
 }
@@ -23,6 +26,9 @@ function initClearBasketListener() {
 
 function createCartElement(cart) {
     let cartMessage = document.createElement("h2");
+
+    // -- the if statement executes a statement if a specified condition is truthy -- //
+
     if (cart) {
         cartMessage.textContent = "Contenu de votre panier 😀";
     } else {
@@ -57,7 +63,10 @@ function showCartShopping() {
         })
 
         paiement.addEventListener("click", (event) => {
-                console.log("paiement")
+                console.log("paiement", paiement)
+
+                // -- the default action that belongs to the event will not occur -- //
+
                 event.preventDefault();
 
                 // -- Prepare data to send to Post -- //
@@ -69,23 +78,35 @@ function showCartShopping() {
                     city: document.getElementById("city").value,
                     email: document.getElementById("eMail").value,
                 };
-                console.log("hello", contact)
+                console.log("contact", contact)
 
                 let cart = JSON.parse(localStorage.getItem("cart"));
                 if (!cart) {
                     return
                 }
-                console.log("coucou", cart)
+                console.log(cart)
                 let products = cart.map(product => product._id)
                 console.log(JSON.stringify({contact, products}))
+
                 // -- Post -- //
 
                 fetch("http://localhost:3000/api/cameras/order", {
                     method: "POST",
+
+                    //-- headers option --//
                     headers: {
+
+                        //-- to indicate the format of the posted data --//
+
                         "accept": "application.json",
+
+                        //-- specify the content type of data i'm pushing --//
+
                         "Content-Type": "application/json"
                     },
+
+                    //-- function used to transform a JavaScript object into a JSON string --//
+
                     body: JSON.stringify({contact, products})
                 })
                     .then((response) => response.json())
