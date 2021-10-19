@@ -1,8 +1,10 @@
 // -- declaration of const -- //
 
 const server = "http://localhost:3000/api/cameras";
+console.log(server)
 
 // -- The Intl.NumberFormat object enables language-sensitive number formatting -- //
+
 const formatter = new Intl.NumberFormat('fr-FR', {
     style: 'currency',
     currency: 'EUR',
@@ -11,6 +13,7 @@ const formatter = new Intl.NumberFormat('fr-FR', {
 // -- retrieve URL -- //
 
 const url = new URLSearchParams(window.location.search);
+console.log(url)
 
 // -- store id -- //
 
@@ -187,6 +190,8 @@ function onClickShoppingCartButton() {
     if (cart == null) {
         cart = []
     }
+
+    // -- The push() method adds one or more elements to the end of an array and returns the new length of the array -- //
     cart.push(camera)
 
     console.log("cart2", cart)

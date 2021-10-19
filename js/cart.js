@@ -1,9 +1,10 @@
 // -- declaration of const -- //
 
-const formatter = new Intl.NumberFormat('fr-FR', {
-    style: 'currency',
-    currency: 'EUR',
-});
+const
+    formatter = new Intl.NumberFormat('fr-FR', {
+        style: 'currency',
+        currency: 'EUR',
+    });
 
 // -- select elementId for payment -- //
 
@@ -80,13 +81,62 @@ function showCartShopping() {
                 };
                 console.log("contact", contact)
 
-                let cart = JSON.parse(localStorage.getItem("cart"));
-                if (!cart) {
-                    return
+                // -- function control -- //
+
+                const regexFirstName = (value) => {
+                    return /^[A-Za-z]{1,20}$/.test(value);
                 }
-                console.log(cart)
-                let products = cart.map(product => product._id)
-                console.log(JSON.stringify({contact, products}))
+
+                const regexLastName = (value) => {
+                    return /^[A-Za-z]{1,20}$/.test(value);
+                }
+
+                const regexEmail = (value) => {
+                    return /^[\w -.]+@([\w-]+\.)+[\w-]{2,4}$/.test(value);
+                }
+
+                function firstNameControl() {
+                    const firstName = contact.firstName;
+                    if (regexFirstName(firstName)) {
+                        return true;
+                    } else {
+                        alert("Prénom invalide, merci de remplir le champ correctement!");
+                        return false;
+                    }
+                }
+
+                function lastNameControl() {
+                    const lastName = contact.lastName;
+                    if (regexLastName(lastName)) {
+                        return true;
+                    } else {
+                        alert("Nom invalide, merci de remplir le champ correctement!");
+                        return false;
+                    }
+                }
+
+                function emailControl() {
+                    const eMail = contact.email;
+                    if (regexEmail(eMail)) {
+                        return true;
+                    } else {
+                        alert("E-mail invalide, merci de remplir le champ correctement!");
+                        return false;
+                    }
+                }
+
+                if (firstNameControl() && emailControl() && lastNameControl()) {
+                    let cart = JSON.parse(localStorage.getItem("cart"));
+                    if (!cart) {
+                        return
+                    }
+                    const products = cart.map(product => product._id)
+                    JSON.stringify({contact, products})
+                } else {
+                    return false
+                }
+
+                const products = cart.map(product => product._id)
 
                 // -- Post -- //
 
@@ -94,6 +144,7 @@ function showCartShopping() {
                     method: "POST",
 
                     //-- headers option --//
+
                     headers: {
 
                         //-- to indicate the format of the posted data --//
